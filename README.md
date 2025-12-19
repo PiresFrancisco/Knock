@@ -84,13 +84,18 @@ Configurar Credenciais:
 
     Coloca o teu ficheiro serviceAccountKey.json do Firebase na pasta raiz.
 
-Adiciona a tua API_KEY da OpenAI no script principal.
+Adiciona a API_KEY da OpenAI fornecida para a sua utilização dentro do KnockRuntime.py.
 
-Atualiza o token_android com o token gerado pela tua App.
+Atualiza o token_android com o token gerado pela app Android.
 
-Executar o Sistema:
+Executar o Software:
 
     python3 KnockRuntime.py
+
+Executar a Transmição Raspberry Pi - App Android
+
+        /usr/bin/rpicam-vid -t 0 --inline --listen -n --width 1280 --height 720 --framerate 30 -o - | ffmpeg -i pipe:0 -c:v copy -f rtsp rtsp://127.0.0.1:8554/doorbell
+        
 
 👥 Autores
 
@@ -98,4 +103,4 @@ André Medina (82611)
 
 Francisco Pires (82604)
 
-Professor: Fernando Barros
+
