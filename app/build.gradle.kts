@@ -1,18 +1,18 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
+    id("com.google.gms.google-services")
 }
 
 android {
     namespace = "com.piresworks.knockv2"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 35 // ✅ ATUALIZADO PARA 35 (Estável)
 
     defaultConfig {
         applicationId = "com.piresworks.knockv2"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 35 // ✅ ATUALIZADO PARA 35
         versionCode = 1
         versionName = "1.0"
 
@@ -37,18 +37,50 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        compose = true
     }
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
+    // --- FIREBASE (Mantemos a BOM) ---
+    implementation(platform("com.google.firebase:firebase-bom:34.6.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-messaging")
+
+    // --- ANDROID X (VERSÕES ESTÁVEIS FIXAS) ---
+    // Substituímos as chamadas "libs." por versões manuais para evitar o erro do SDK 36
+
+    // Core KTX (Estável para SDK 35)
+    implementation("androidx.core:core-ktx:1.15.0")
+
+    // AppCompat e Material
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.constraintlayout)
+
+    // Activity & Navegação (Versões compatíveis)
+    implementation("androidx.activity:activity-ktx:1.9.3")
+    implementation("androidx.activity:activity-compose:1.9.3")
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
-    implementation(libs.androidx.activity)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    // --- COMPOSE ---
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
+
+    // --- TESTES ---
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    debugImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
+    implementation("com.google.android.exoplayer:exoplayer-core:2.19.1")
+    implementation("com.google.android.exoplayer:exoplayer-ui:2.19.1")
+    implementation("com.google.android.exoplayer:exoplayer-rtsp:2.19.1")
 }

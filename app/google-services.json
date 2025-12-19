@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "648136538240",
+    "project_id": "knock-d9f60",
+    "storage_bucket": "knock-d9f60.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648136538240:android:b9e05d5e00008bac184e65",
+        "android_client_info": {
+          "package_name": "com.piresworks.knock"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfrVFbDwXo-6T0BLc1e9SywbijGeAbYxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648136538240:android:be4a80c8fb1822da184e65",
+        "android_client_info": {
+          "package_name": "com.piresworks.knockv2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfrVFbDwXo-6T0BLc1e9SywbijGeAbYxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
