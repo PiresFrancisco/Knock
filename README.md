@@ -1,8 +1,8 @@
-🔔 Knock - Campainha Inteligente com IA
+Knock - Smart AI DoorBell
 
-O Knock é um sistema de campainha inteligente desenvolvido para a disciplina de Automação e Controlo. Ao contrário das campainhas tradicionais, o Knock utiliza Reconhecimento de Voz e a API da OpenAI (ChatGPT) para interagir com o visitante, resumir a sua intenção e enviar notificações em tempo real para uma aplicação Android dedicada.
+O Knock é um sistema de campainha inteligente desenvolvido como Projeto Integrado. Ao contrário das campainhas tradicionais, o Knock utiliza Reconhecimento de Voz e a API da OpenAI (ChatGPT) para interagir com o visitante, resumir a sua intenção e enviar notificações em tempo real para uma aplicação Android dedicada.
 
-🚀 Funcionalidades Principal
+🚀 Funcionalidades Principais
 
     Notificações Push Instantâneas: O utilizador é alertado no telemóvel assim que o botão é pressionado através do Firebase Cloud Messaging (FCM).
 
