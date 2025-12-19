@@ -68,9 +68,9 @@ Player de Vídeo: ExoPlayer para suporte nativo a RTSP.
 ⚙️ Instalação e Configuração
 
     Clonar o Repositório:
-    Bash
+    git clone https://github.com/PiresFrancisco/Knock.git
 
-git clone https://github.com/PiresFrancisco/Knock.git
+
 
 Configurar Credenciais:
 
@@ -81,13 +81,12 @@ Adiciona a tua API_KEY da OpenAI no script principal.
 Atualiza o token_android com o token gerado pela tua App.
 
 Executar o Sistema:
-Bash
 
-    python3 main.py
+    python3 KnockRuntime.py
 
 👥 Autores
 
-    André Medina (82611) 
+André Medina (82611) 
 
 Francisco Pires (82604)
 
