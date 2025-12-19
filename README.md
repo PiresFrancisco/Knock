@@ -1,3 +1,11 @@
+
+![alt text](https://github.com/PiresFrancisco/Knock/blob/main/Knock.png)
+
+
+
+
+
+
 Knock - Smart AI DoorBell
 
 O Knock é um sistema de campainha inteligente desenvolvido como Projeto Integrado. Ao contrário das campainhas tradicionais, o Knock utiliza Reconhecimento de Voz e a API da OpenAI (ChatGPT) para interagir com o visitante, resumir a sua intenção e enviar notificações em tempo real para uma aplicação Android dedicada.
